@@ -1,7 +1,7 @@
 const vm = new Vue({
 	el:'#app',
 	data:{
-		result:"ここにテーマが出力されます",
+		result:"ここにテーマが出力されます(^O^)／",
 		theme:[
 			"ゲーム",
 			"学校",
@@ -24,6 +24,7 @@ const vm = new Vue({
 			"ウェブクルー",
 			"理想の恋人",
 			"YouTube",
+			"YouTuber",
 			"SMAP",
 			"七五三",
 			"修学旅行",
@@ -46,12 +47,15 @@ const vm = new Vue({
 			"誕生日",
 			"ゴリラの倒し方",
 			"ヤンキー",
-			"華金"
+			"華金",
+			"混浴",
+			"ジャニーさん",
+			"ジャニーズ"
 		]
 	},
 	methods:{
-		themeChoose:function(){
-			const num = Math.floor(Math.random()*this.theme.length);
+		themeChoose: function(){
+			const num = Math.floor(Math.random() * this.theme.length);
 			this.result = this.theme[num];
 		}
 	}

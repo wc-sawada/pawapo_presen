@@ -6,12 +6,66 @@
 <title>パワポプレゼンテーマ</title>
 </head>
 <body>
-<h1>パワポプレゼンテーマ</h1>
-<div id="app">
-	<button id="btn" v-on:click="themeChoose">ボタン</button>
-	<div>{{result}}</div>
-</div>
+	<div class="wrapper">
+		<h1 class="title">パワポプレゼンテーマ</h1>
+		<div id="app" class="theme">
+			<div class="result">{{result}}</div>
+			<button class="btn" v-on:click="themeChoose">テーマを選ぶ！</button>
+		</div>
+	</div>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="./theme.js"></script>
 </body>
+<style>
+	body {
+		width: 100vw;
+		height: 100vh;
+		display: flex; /* 子要素をflexboxで揃える */
+		flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+		justify-content: center; /* 子要素をflexboxにより中央に配置する */
+		align-items: center;  /* 子要素をflexboxにより中央に配置する */
+	}
+	.title {
+		margin-top: 0;
+		font-size: 2.5em;
+		text-align: center;
+		color: #767676;
+	}
+	.theme {
+		text-align: center;
+	}
+	.result {
+		padding: 35px 0 50px;
+		font-size: 3em;
+		font-weight: bold;
+	}
+	.btn {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		padding: 0;
+		appearance: none;
+		padding: 20px;
+		background-color: #0058ce;
+		box-shadow: 0 5px 0 0 #024093;
+		border-radius: 8px;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #fff;
+		letter-spacing: 1px;
+	}
+	.btn:hover {
+		opacity: 0.8;
+	}
+	.btn:active {
+		box-shadow: none;
+		transform: translateY(4px);
+		-webkit-transform: translateY(4px);
+		-moz-transform: translateY(4px);
+		-ms-transform: translateY(4px);
+		transition: .1s all linear;
+	}
+
+</style>
 </html>
