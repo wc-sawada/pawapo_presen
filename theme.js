@@ -89,13 +89,15 @@ const vm = new Vue({
 			"ラジオ体操",
 			"足が速くなる方法",
 			"合コン必勝法",
+			"クリスマス",
+			"ハロウィン",
 		]
 	},
 	methods:{
 		themeChoose: function(){
 			const num = Math.floor(Math.random() * this.theme.length);
 			this.result = '<span>テーマ：</span>' + this.theme[num];
-			this.doc_result = '<span>資料No：</span>' + Math.floor(Math.random() * (19 + 1 -1) + 1);
+			this.doc_result = '<span>資料No：</span>' + Math.floor(Math.random() * (22 + 1 -1) + 1);
 		}
 	}
 });
