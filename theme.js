@@ -1,7 +1,8 @@
 const vm = new Vue({
 	el:'#app',
 	data:{
-		result:"ここにテーマが出力されます(^O^)／",
+		result:"ここにテーマが出力されます。",
+		doc_result:"ここに資料Noが出力されます。",
 		theme:[
 			"ゲーム",
 			"学校",
@@ -93,7 +94,8 @@ const vm = new Vue({
 	methods:{
 		themeChoose: function(){
 			const num = Math.floor(Math.random() * this.theme.length);
-			this.result = this.theme[num];
+			this.result = '<span>テーマ：</span>' + this.theme[num];
+			this.doc_result = '<span>資料No：</span>' + Math.floor(Math.random() * (19 + 1 -1) + 1);
 		}
 	}
 });
